@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Parking | About Us</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#eef2f7,#dbe7f3);
+color:#222;
+}
+
+/* Navbar */
+nav{
+width:100%;
+padding:18px 60px;
+background:rgba(8,27,51,0.95);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#00c6ff;
+}
+
+nav ul{
+display:flex;
+gap:28px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:16px;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#00c6ff;
+}
+
+/* Hero */
+.hero{
+padding:70px 60px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.hero-text{
+flex:1;
+min-width:300px;
+}
+
+.hero-text h1{
+font-size:52px;
+color:#081b33;
+margin-bottom:18px;
+}
+
+.hero-text h1 span{
+color:#00c6ff;
+}
+
+.hero-text p{
+font-size:18px;
+color:#555;
+line-height:1.8;
+margin-bottom:15px;
+}
+
+.hero-icon{
+flex:1;
+min-width:280px;
+text-align:center;
+}
+
+.hero-icon i{
+font-size:220px;
+color:#00c6ff;
+animation:float 3s infinite ease-in-out;
+}
+
+/* Section */
+.section{
+padding:50px 60px;
+text-align:center;
+}
+
+.section-title{
+font-size:38px;
+color:#081b33;
+margin-bottom:15px;
+}
+
+.section-sub{
+color:#666;
+margin-bottom:35px;
+}
+
+/* Cards */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:22px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:22px;
+box-shadow:0 15px 30px rgba(0,0,0,0.08);
+transition:0.3s;
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card i{
+font-size:42px;
+color:#00c6ff;
+margin-bottom:15px;
+}
+
+.card h3{
+font-size:22px;
+color:#081b33;
+margin-bottom:10px;
+}
+
+.card p{
+color:#666;
+line-height:1.7;
+}
+
+/* Footer */
+footer{
+background:#081b33;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:30px;
+}
+
+/* Animation */
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+}
+
+/* Responsive */
+@media(max-width:900px){
+
+nav{
+padding:15px 20px;
+flex-direction:column;
+gap:12px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.hero{
+padding:40px 20px;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:40px;
+}
+
+.hero-icon i{
+font-size:150px;
+}
+
+.section{
+padding:30px 20px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+<div class="logo"><i class="fas fa-car"></i> Smart Parking</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="dashboard.html">Dashboard</a></li>
+<li><a href="logout.html">Logout</a></li>
+</ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+
+<div class="hero-text">
+<h1>About <span>Smart Parking</span></h1>
+
+<p>
+Smart Parking System is an IoT based project designed to reduce parking problems and improve traffic management using smart sensors and web technology.
+</p>
+
+<p>
+It helps users find available parking slots in real time and improves efficiency in crowded areas like malls, hospitals and cities.
+</p>
+
+</div>
+
+<div class="hero-icon">
+<i class="fas fa-parking"></i>
+</div>
+
+</section>
+
+<!-- Mission -->
+<section class="section">
+<h2 class="section-title">Our Mission</h2>
+<p class="section-sub">
+To build a smart, efficient and automated parking system using IoT technology.
+</p>
+</section>
+
+<!-- Why We Created -->
+<section class="section">
+
+<h2 class="section-title">Why We Created This Project</h2>
+
+<div class="cards">
+
+<div class="card">
+<i class="fas fa-car-side"></i>
+<h3>Parking Issues</h3>
+<p>Drivers waste time searching for parking spaces.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-smog"></i>
+<h3>Traffic Problems</h3>
+<p>Unmanaged parking increases congestion and pollution.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-lightbulb"></i>
+<h3>Smart Solution</h3>
+<p>IoT provides automated real-time parking management.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- How It Works -->
+<section class="section">
+
+<h2 class="section-title">How It Works</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Step 1</h3>
+<p>IR sensors detect vehicle entry and exit.</p>
+</div>
+
+<div class="card">
+<h3>Step 2</h3>
+<p>ESP32 sends data to system via WiFi.</p>
+</div>
+
+<div class="card">
+<h3>Step 3</h3>
+<p>Website shows real-time parking availability.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Vision -->
+<section class="section">
+<h2 class="section-title">Our Vision</h2>
+<p class="section-sub">
+To develop smart city solutions that improve transportation and reduce traffic problems using technology.
+</p>
+</section>
+
+<!-- Footer -->
+<footer>
+© 2026 Smart Parking System | Developed By Smart Parking Major Project Team 
+</footer>
+
+</body>
+</html>
