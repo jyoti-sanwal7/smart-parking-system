@@ -146,7 +146,73 @@ background:linear-gradient(135deg,#28a745,#34d058);
 .occupied{
 background:linear-gradient(135deg,#dc3545,#ff5f6d);
 }
+
+/* ================= RESPONSIVE FIX ================= */
+
+@media(max-width:900px){
+
+nav{
+flex-direction:column;
+padding:15px 20px;
+gap:10px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+gap:12px;
+}
+
+.hero{
+padding:40px 20px;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:36px;
+}
+
+.hero-text p{
+font-size:15px;
+}
+
+.hero-box{
+grid-template-columns:1fr 1fr;
+padding:20px;
+gap:12px;
+}
+
+.slots{
+padding:20px;
+}
+
+}
+
+@media(max-width:600px){
+
+.hero-box{
+grid-template-columns:1fr;
+}
+
+.hero-text h1{
+font-size:28px;
+}
+
+.slot{
+font-size:15px;
+padding:20px;
+}
+
+.mini-card h2{
+font-size:22px;
+}
+
+.mini-card i{
+font-size:28px;
+}
+}
 </style>
+
 </head>
 
 <body>
@@ -165,7 +231,7 @@ background:linear-gradient(135deg,#dc3545,#ff5f6d);
 
 <div class="hero-text">
 <h1>Smart Parking <span>Dashboard</span></h1>
-<p>A real-time IoT-based smart parking system powered by Firebase. It continuously monitors parking slots and provides live updates of available spaces, occupied slots, and the last vehicle entry time.</p>
+<p>A real-time IoT-based smart parking system powered by Firebase. It continuously monitors parking slots and provides live updates of available slots, occupied slots, and the last vehicle entry time.</p>
 </div>
 
 <div class="hero-box">
