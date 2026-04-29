@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Parking System | Login</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0a192f,#112240,#1b2a49);
+    padding:20px;
+}
+
+.main-box{
+    width:100%;
+    max-width:1000px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    background:rgba(255,255,255,0.08);
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,0.35);
+}
+
+.left{
+    padding:60px 40px;
+    color:#fff;
+    background:linear-gradient(160deg,#00b4db,#0083b0);
+}
+
+.left h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.left p{
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+.feature{
+    margin-bottom:15px;
+    font-size:16px;
+}
+
+.right{
+    background:#fff;
+    padding:50px 40px;
+}
+
+.right h2{
+    font-size:32px;
+    margin-bottom:10px;
+    color:#0a192f;
+}
+
+.right p{
+    color:#666;
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    margin-top:12px;
+    margin-bottom:6px;
+    color:#333;
+}
+
+input{
+    width:100%;
+    padding:13px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:15px;
+}
+
+input:focus{
+    border-color:#0083b0;
+    outline:none;
+}
+
+.row{
+    display:flex;
+    justify-content:space-between;
+    margin-top:15px;
+    font-size:14px;
+}
+
+a{
+    color:#0083b0;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+button{
+    width:100%;
+    margin-top:25px;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(135deg,#00b4db,#0083b0);
+    color:#fff;
+    font-size:18px;
+    cursor:pointer;
+}
+
+button:hover{
+    opacity:.95;
+}
+
+#msg{
+    text-align:center;
+    margin-top:15px;
+    font-weight:600;
+}
+
+.footer{
+    text-align:center;
+    margin-top:18px;
+    color:#666;
+}
+
+@media(max-width:900px){
+.main-box{
+grid-template-columns:1fr;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="main-box">
+
+<div class="left">
+<h1>Smart Parking</h1>
+<p>Professional IoT based parking solution with secure login and dashboard system.</p>
+
+<div class="feature">✔ Create Account Once</div>
+<div class="feature">✔ Data Saved Automatically</div>
+<div class="feature">✔ Forgot Password</div>
+<div class="feature">✔ Secure Login Access</div>
+</div>
+
+<div class="right">
+
+<h2>Login</h2>
+<p>Create account first, then login anytime</p>
+
+<label>Email ID</label>
+<input type="email" id="email" placeholder="Enter email">
+
+<label>Username</label>
+<input type="text" id="username" placeholder="Enter username">
+
+<label>Password</label>
+<input type="password" id="password" placeholder="Enter password">
+
+<div class="row">
+<a onclick="forgotPassword()">Forgot Password?</a>
+<a onclick="createAccount()">Create Account</a>
+</div>
+
+<button onclick="login()">Login</button>
+
+<div id="msg"></div>
+
+<div class="footer">
+Your account stays saved after closing website
+</div>
+
+</div>
+</div>
+
+<script>
+
+// Load saved data
+let savedEmail = localStorage.getItem("email") || "";
+let savedUsername = localStorage.getItem("username") || "";
+let savedPassword = localStorage.getItem("password") || "";
+
+function createAccount(){
+
+let email = prompt("Enter Email ID");
+let user = prompt("Enter Username");
+let pass = prompt("Create Password");
+
+if(email=="" || user=="" || pass=="" || email==null || user==null || pass==null){
+alert("All fields required");
+return;
+}
+
+savedEmail = email;
+savedUsername = user;
+savedPassword = pass;
+
+// Save data permanently
+localStorage.setItem("email", email);
+localStorage.setItem("username", user);
+localStorage.setItem("password", pass);
+
+alert("Account Created Successfully! Now Login.");
+}
+
+function login(){
+
+let email = document.getElementById("email").value;
+let username = document.getElementById("username").value;
+let password = document.getElementById("password").value;
+let msg = document.getElementById("msg");
+
+msg.style.color = "red";
+
+if(savedEmail==""){
+msg.innerHTML = "Please create account first";
+return;
+}
+
+if(email=="" || username=="" || password==""){
+msg.innerHTML = "Please fill all fields";
+return;
+}
+
+if(email!=savedEmail || username!=savedUsername || password!=savedPassword){
+msg.innerHTML = "Invalid Email, Username or Password";
+return;
+}
+
+msg.style.color = "green";
+msg.innerHTML = "Login Successful";
+localStorage.setItem("loggedIn","yes");
+
+setTimeout(()=>{
+window.location.href="index.html";
+},1200);
+
+}
+
+function forgotPassword(){
+
+if(savedEmail==""){
+alert("Create account first");
+return;
+}
+
+let newPass = prompt("Enter New Password");
+
+if(newPass=="" || newPass==null){
+return;
+}
+
+savedPassword = newPass;
+
+// Update password
+localStorage.setItem("password", newPass);
+
+alert("Password Reset Successfully");
+}
+
+</script>
+
+</body>
+</html>
