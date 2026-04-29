@@ -22,6 +22,7 @@ body{
     padding:20px;
 }
 
+/* MAIN BOX */
 .main-box{
     width:100%;
     max-width:1000px;
@@ -33,6 +34,7 @@ body{
     box-shadow:0 15px 35px rgba(0,0,0,0.35);
 }
 
+/* LEFT SECTION */
 .left{
     padding:60px 40px;
     color:#fff;
@@ -55,6 +57,7 @@ body{
     font-size:16px;
 }
 
+/* RIGHT SECTION */
 .right{
     background:#fff;
     padding:50px 40px;
@@ -96,6 +99,7 @@ input:focus{
     justify-content:space-between;
     margin-top:15px;
     font-size:14px;
+    gap:10px;
 }
 
 a{
@@ -132,10 +136,52 @@ button:hover{
     color:#666;
 }
 
+/* 🔥 RESPONSIVE DESIGN (IMPORTANT FIX) */
 @media(max-width:900px){
-.main-box{
-grid-template-columns:1fr;
+    .main-box{
+        grid-template-columns:1fr;
+    }
+
+    .left{
+        padding:40px 25px;
+        text-align:center;
+    }
+
+    .left h1{
+        font-size:32px;
+    }
+
+    .left p{
+        font-size:16px;
+    }
+
+    .right{
+        padding:35px 25px;
+    }
 }
+
+@media(max-width:480px){
+    .left h1{
+        font-size:26px;
+    }
+
+    .right h2{
+        font-size:26px;
+    }
+
+    input{
+        font-size:14px;
+        padding:12px;
+    }
+
+    button{
+        font-size:16px;
+    }
+
+    .row{
+        flex-direction:column;
+        align-items:flex-start;
+    }
 }
 </style>
 </head>
