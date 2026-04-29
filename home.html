@@ -178,37 +178,75 @@ transform:translateY(0);
 }
 }
 
-/* Responsive */
-@media(max-width:900px){
+/* ---------------- RESPONSIVE FIX ---------------- */
+
+@media (max-width:900px){
+
 .hero{
 flex-direction:column;
 text-align:center;
-padding-top:110px;
+padding:120px 20px 60px;
 height:auto;
-padding-bottom:60px;
 }
 
 .hero-text h1{
-font-size:42px;
+font-size:36px;
+}
+
+.hero-text p{
+font-size:15px;
 }
 
 .hero-img i{
-font-size:150px;
-margin-top:30px;
+font-size:120px;
+margin-top:20px;
+}
+
+.section{
+padding:60px 20px;
+}
+
+.section h2{
+font-size:28px;
+}
+
+.cards{
+grid-template-columns:1fr;
 }
 
 nav{
-padding:15px 20px;
 flex-direction:column;
-gap:12px;
+padding:15px 20px;
+gap:10px;
 }
 
 nav ul{
-gap:15px;
+gap:12px;
 flex-wrap:wrap;
 justify-content:center;
 }
 }
+
+@media (max-width:480px){
+
+.hero-text h1{
+font-size:28px;
+}
+
+.hero-text p{
+font-size:14px;
+}
+
+.card{
+padding:20px;
+}
+
+.card img{
+width:90px;
+height:90px;
+}
+}
+
 </style>
 </head>
 
@@ -230,7 +268,7 @@ justify-content:center;
 <div class="hero-text">
 <h1><span>Smart Parking System</span> Using IoT</h1>
 <p>
-A smart solution that helps users quickly find an avaiable parking slot using IoT technology.
+A smart solution that helps users quickly find an available parking slot using IoT technology.
 <br>
 The system detects whether each slot is empty or occupied and displays live updates on a web dashboard, saving time and reducing traffic congestion.
 </p>
@@ -313,7 +351,7 @@ The system detects whether each slot is empty or occupied and displays live upda
 </div>
 </section>
 
-<!-- Team Members -->
+<!-- Team -->
 <section class="section">
 <h2>Project Team Members</h2>
 <p>Developed by our 5-member team.</p>
@@ -327,9 +365,8 @@ The system detects whether each slot is empty or occupied and displays live upda
 </div>
 </section>
 
-<!-- Footer -->
 <footer>
-© 2026 Smart Parking System | Developed By Team
+© 2026 Smart Parking System | Developed By Smart Parking Major Project Team 
 </footer>
 
 </body>
