@@ -171,7 +171,6 @@ margin-top:30px;
 50%{transform:translateY(-15px);}
 }
 
-/* Responsive */
 @media(max-width:900px){
 
 nav{
@@ -200,7 +199,26 @@ font-size:150px;
 }
 
 .section{
-padding:30px 20px;
+padding:40px 20px;
+}
+}
+
+@media(max-width:480px){
+
+.hero-text h1{
+font-size:28px;
+}
+
+.hero-text p{
+font-size:14px;
+}
+
+.hero-icon i{
+font-size:110px;
+}
+
+.card{
+padding:20px;
 }
 }
 </style>
@@ -293,7 +311,7 @@ To build a smart, efficient and automated parking system using IoT technology.
 
 <div class="card">
 <h3>Step 2</h3>
-<p>ESP32 sends data to system via WiFi.</p>
+<p>ESP32 sends data to Firebase via WiFi.</p>
 </div>
 
 <div class="card">
