@@ -158,63 +158,72 @@ padding:20px;
 margin-top:30px;
 }
 
-/* RESPONSIVE FIX (ADD ONLY THIS) */
+/* FINAL MOBILE FIX FOR ABOUT PAGE */
 @media (max-width:900px){
 
+body{
+overflow-x:hidden;
+}
+
+/* HERO FIX */
 .hero{
 flex-direction:column;
 text-align:center;
-padding:120px 20px 40px;
+padding:80px 20px 30px;
 gap:20px;
 }
 
 .hero-text{
-width:100%;
+min-width:100%;
 }
 
 .hero-text h1{
-font-size:32px;
+font-size:30px;
 }
 
 .hero-text p{
 font-size:15px;
+line-height:1.5;
 }
 
+/* ICON FIX */
 .hero-icon i{
-font-size:120px;
+font-size:100px;
 margin-top:10px;
 }
 
+/* SECTION FIX */
 .section{
-padding:50px 20px;
+padding:50px 15px;
 }
 
 .section-title{
 font-size:26px;
 }
 
+/* CARDS FIX */
 .cards{
 grid-template-columns:1fr;
 gap:15px;
 }
 
 .card{
-padding:20px;
+padding:18px;
 }
 }
 
 @media (max-width:480px){
 
 .hero-text h1{
-font-size:26px;
+font-size:24px;
 }
 
 .hero-text p{
-font-size:14px;
+font-size:13px;
 }
 
 .hero-icon i{
-font-size:90px;
+font-size:80px;
 }
 
 .section-title{
