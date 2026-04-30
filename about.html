@@ -157,6 +157,71 @@ text-align:center;
 padding:20px;
 margin-top:30px;
 }
+
+/* RESPONSIVE FIX (ADD ONLY THIS) */
+@media (max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+padding:120px 20px 40px;
+gap:20px;
+}
+
+.hero-text{
+width:100%;
+}
+
+.hero-text h1{
+font-size:32px;
+}
+
+.hero-text p{
+font-size:15px;
+}
+
+.hero-icon i{
+font-size:120px;
+margin-top:10px;
+}
+
+.section{
+padding:50px 20px;
+}
+
+.section-title{
+font-size:26px;
+}
+
+.cards{
+grid-template-columns:1fr;
+gap:15px;
+}
+
+.card{
+padding:20px;
+}
+}
+
+@media (max-width:480px){
+
+.hero-text h1{
+font-size:26px;
+}
+
+.hero-text p{
+font-size:14px;
+}
+
+.hero-icon i{
+font-size:90px;
+}
+
+.section-title{
+font-size:22px;
+}
+}
+
 </style>
 </head>
 
