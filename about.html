@@ -158,78 +158,69 @@ padding:20px;
 margin-top:30px;
 }
 
-/* FINAL MOBILE FIX FOR ABOUT PAGE */
-@media (max-width:900px){
+@media(max-width:900px){
 
-body{
-overflow-x:hidden;
-}
-
-/* HERO FIX */
-.hero{
+nav{
 flex-direction:column;
-text-align:center;
-padding:80px 20px 30px;
-gap:20px;
+padding:15px 20px;
+gap:10px;
 }
 
-.hero-text{
-min-width:100%;
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+gap:12px;
+}
+
+.hero{
+padding:40px 20px;
+text-align:center;
 }
 
 .hero-text h1{
-font-size:30px;
+font-size:36px;
 }
 
 .hero-text p{
 font-size:15px;
-line-height:1.5;
 }
 
-/* ICON FIX */
-.hero-icon i{
-font-size:100px;
-margin-top:10px;
+.hero-box{
+grid-template-columns:1fr 1fr;
+padding:20px;
+gap:12px;
 }
 
-/* SECTION FIX */
-.section{
-padding:50px 15px;
+.slots{
+padding:20px;
 }
 
-.section-title{
-font-size:26px;
 }
 
-/* CARDS FIX */
-.cards{
+@media(max-width:600px){
+
+.hero-box{
 grid-template-columns:1fr;
-gap:15px;
 }
-
-.card{
-padding:18px;
-}
-}
-
-@media (max-width:480px){
 
 .hero-text h1{
-font-size:24px;
+font-size:28px;
 }
 
-.hero-text p{
-font-size:13px;
+.slot{
+font-size:15px;
+padding:20px;
 }
 
-.hero-icon i{
-font-size:80px;
-}
-
-.section-title{
+.mini-card h2{
 font-size:22px;
 }
+
+.mini-card i{
+font-size:28px;
 }
+}
+
 
 </style>
 </head>
