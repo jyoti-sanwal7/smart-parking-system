@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Smart Parking | About Us</title>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -25,7 +26,6 @@ nav{
 width:100%;
 padding:18px 60px;
 background:rgba(8,27,51,0.95);
-backdrop-filter:blur(10px);
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -51,7 +51,6 @@ nav ul li a{
 text-decoration:none;
 color:white;
 font-size:16px;
-transition:0.3s;
 }
 
 nav ul li a:hover{
@@ -64,7 +63,6 @@ padding:70px 60px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-gap:40px;
 flex-wrap:wrap;
 }
 
@@ -74,9 +72,8 @@ min-width:300px;
 }
 
 .hero-text h1{
-font-size:52px;
+font-size:48px;
 color:#081b33;
-margin-bottom:18px;
 }
 
 .hero-text h1 span{
@@ -84,22 +81,20 @@ color:#00c6ff;
 }
 
 .hero-text p{
-font-size:18px;
+margin-top:15px;
+font-size:17px;
+line-height:1.7;
 color:#555;
-line-height:1.8;
-margin-bottom:15px;
 }
 
 .hero-icon{
 flex:1;
-min-width:280px;
 text-align:center;
 }
 
 .hero-icon i{
-font-size:220px;
+font-size:180px;
 color:#00c6ff;
-animation:float 3s infinite ease-in-out;
 }
 
 /* Section */
@@ -109,30 +104,29 @@ text-align:center;
 }
 
 .section-title{
-font-size:38px;
+font-size:36px;
+margin-bottom:10px;
 color:#081b33;
-margin-bottom:15px;
 }
 
 .section-sub{
 color:#666;
-margin-bottom:35px;
+margin-bottom:30px;
 }
 
 /* Cards */
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:22px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
 }
 
 .card{
 background:white;
-padding:30px;
-border-radius:22px;
-box-shadow:0 15px 30px rgba(0,0,0,0.08);
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
 transition:0.3s;
-text-align:center;
 }
 
 .card:hover{
@@ -140,20 +134,19 @@ transform:translateY(-8px);
 }
 
 .card i{
-font-size:42px;
+font-size:35px;
 color:#00c6ff;
-margin-bottom:15px;
-}
-
-.card h3{
-font-size:22px;
-color:#081b33;
 margin-bottom:10px;
 }
 
+.card h3{
+margin-bottom:8px;
+color:#081b33;
+}
+
 .card p{
+font-size:14px;
 color:#666;
-line-height:1.7;
 }
 
 /* Footer */
@@ -161,65 +154,8 @@ footer{
 background:#081b33;
 color:white;
 text-align:center;
-padding:25px;
-margin-top:30px;
-}
-
-/* Animation */
-@keyframes float{
-0%,100%{transform:translateY(0);}
-50%{transform:translateY(-15px);}
-}
-
-@media(max-width:900px){
-
-nav{
-padding:15px 20px;
-flex-direction:column;
-gap:12px;
-}
-
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-}
-
-.hero{
-padding:40px 20px;
-text-align:center;
-}
-
-.hero-text h1{
-font-size:40px;
-}
-
-.hero-icon i{
-font-size:150px;
-}
-
-.section{
-padding:40px 20px;
-}
-}
-
-@media(max-width:480px){
-
-.hero-text h1{
-font-size:28px;
-}
-
-.hero-text p{
-font-size:14px;
-}
-
-.hero-icon i{
-font-size:110px;
-}
-
-.card{
 padding:20px;
-}
+margin-top:30px;
 }
 </style>
 </head>
@@ -229,7 +165,6 @@ padding:20px;
 <!-- Navbar -->
 <nav>
 <div class="logo"><i class="fas fa-car"></i> Smart Parking</div>
-
 <ul>
 <li><a href="home.html">Home</a></li>
 <li><a href="about.html">About</a></li>
@@ -245,11 +180,13 @@ padding:20px;
 <h1>About <span>Smart Parking</span></h1>
 
 <p>
-Smart Parking System is an IoT based project designed to reduce parking problems and improve traffic management using smart sensors and web technology.
+The Smart Parking System Using IoT is developed to provide an efficient and automated solution for managing parking spaces. 
+The system uses IR sensors to detect vehicle entry and exit, an ESP32 microcontroller to process data, and a servo motor to control the parking gate automatically.
 </p>
 
 <p>
-It helps users find available parking slots in real time and improves efficiency in crowded areas like malls, hospitals and cities.
+It continuously tracks the number of available and occupied slots, displays the information on an LCD screen, and updates real-time data to a Firebase database. 
+Users can monitor parking availability through a web dashboard from anywhere.
 </p>
 
 </div>
@@ -263,34 +200,86 @@ It helps users find available parking slots in real time and improves efficiency
 <!-- Mission -->
 <section class="section">
 <h2 class="section-title">Our Mission</h2>
+
 <p class="section-sub">
-To build a smart, efficient and automated parking system using IoT technology.
+To design and develop an intelligent Smart Parking System using IoT technology that efficiently manages parking spaces, reduces traffic congestion, saves time, and improves the overall user experience through automation and real-time monitoring.
 </p>
+
 </section>
 
-<!-- Why We Created -->
+<!-- Why -->
 <section class="section">
-
 <h2 class="section-title">Why We Created This Project</h2>
 
 <div class="cards">
 
 <div class="card">
-<i class="fas fa-car-side"></i>
-<h3>Parking Issues</h3>
-<p>Drivers waste time searching for parking spaces.</p>
+<i class="fas fa-parking"></i>
+<h3>Parking Difficulty</h3>
+<p>Finding parking in crowded areas is time-consuming and frustrating for drivers.</p>
 </div>
 
 <div class="card">
-<i class="fas fa-smog"></i>
-<h3>Traffic Problems</h3>
-<p>Unmanaged parking increases congestion and pollution.</p>
+<i class="fas fa-car-side"></i>
+<h3>Fuel & Time Waste</h3>
+<p>Searching for parking increases fuel consumption and unnecessary delays.</p>
 </div>
 
 <div class="card">
 <i class="fas fa-lightbulb"></i>
 <h3>Smart Solution</h3>
-<p>IoT provides automated real-time parking management.</p>
+<p>IoT enables automated real-time parking management.</p>
+</div>
+
+</div>
+</section>
+
+<!-- Applications -->
+<section class="section">
+
+<h2 class="section-title">Applications</h2>
+<p class="section-sub">Real-world areas where this system can be implemented.</p>
+
+<div class="cards">
+
+<div class="card">
+<i class="fas fa-shopping-cart"></i>
+<h3>Shopping Malls</h3>
+<p>
+Helps manage heavy traffic and reduces waiting time for parking.
+</p>
+</div>
+
+<div class="card">
+<i class="fas fa-hospital"></i>
+<h3>Hospitals</h3>
+<p>
+Provides quick parking access for patients and emergency vehicles.
+</p>
+</div>
+
+<div class="card">
+<i class="fas fa-building"></i>
+<h3>Office Complexes</h3>
+<p>
+Organizes employee and visitor parking efficiently.
+</p>
+</div>
+
+<div class="card">
+<i class="fas fa-plane"></i>
+<h3>Airports</h3>
+<p>
+Handles large parking areas with real-time monitoring.
+</p>
+</div>
+
+<div class="card">
+<i class="fas fa-city"></i>
+<h3>Smart Cities</h3>
+<p>
+Supports automated and efficient parking systems.
+</p>
 </div>
 
 </div>
@@ -299,41 +288,138 @@ To build a smart, efficient and automated parking system using IoT technology.
 
 <!-- How It Works -->
 <section class="section">
-
 <h2 class="section-title">How It Works</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>Step 1</h3>
+<i class="fas fa-car"></i>
+<h3>Vehicle Detection</h3>
 <p>IR sensors detect vehicle entry and exit.</p>
 </div>
 
 <div class="card">
-<h3>Step 2</h3>
-<p>ESP32 sends data to Firebase via WiFi.</p>
+<i class="fas fa-door-open"></i>
+<h3>Gate Control</h3>
+<p>ESP32 controls servo motor to open/close gate.</p>
 </div>
 
 <div class="card">
-<h3>Step 3</h3>
-<p>Website shows real-time parking availability.</p>
+<i class="fas fa-list-ol"></i>
+<h3>Slot Counting</h3>
+<p>System updates available and occupied slots.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-tv"></i>
+<h3>LCD Display</h3>
+<p>Displays parking status and slot availability.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-cloud-upload-alt"></i>
+<h3>Cloud Integration</h3>
+<p>Data is sent to Firebase via WiFi.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-chart-line"></i>
+<h3>Web Dashboard</h3>
+<p>Users can monitor parking slots online in real time.</p>
 </div>
 
 </div>
-
 </section>
 
-<!-- Vision -->
+<!-- Working Flow -->
 <section class="section">
-<h2 class="section-title">Our Vision</h2>
+<h2 class="section-title">Working Flow</h2>
+
+<div class="cards">
+
+<div class="card"><i class="fas fa-power-off"></i><p>System starts and connects to WiFi.</p></div>
+
+<div class="card"><i class="fas fa-display"></i><p>LCD shows total and available slots.</p></div>
+
+<div class="card"><i class="fas fa-car"></i><p>Sensor detects incoming vehicle.</p></div>
+
+<div class="card"><i class="fas fa-door-open"></i><p>Gate opens if slot available.</p></div>
+
+<div class="card"><i class="fas fa-plus-circle"></i><p>Slot count increases on entry.</p></div>
+
+<div class="card"><i class="fas fa-minus-circle"></i><p>Slot count decreases on exit.</p></div>
+
+<div class="card"><i class="fas fa-database"></i><p>Data updates to Firebase in real time.</p></div>
+
+</div>
+</section>
+
+<!-- Future Enhancements -->
+<section class="section">
+<h2 class="section-title">Future Enhancements</h2>
 <p class="section-sub">
-To develop smart city solutions that improve transportation and reduce traffic problems using technology.
+Future improvements to enhance system efficiency, automation, and real-world usability.
 </p>
+
+<div class="cards">
+
+<div class="card">
+<i class="fas fa-mobile-alt"></i>
+<h3>Mobile Application</h3>
+<p>
+A mobile app will allow users to book parking slots in advance for easier and faster parking management.
+</p>
+</div>
+
+<div class="card">
+<i class="fas fa-credit-card"></i>
+<h3>Online Payment System</h3>
+<p>A digital payment system will allow users to pay parking fees online using UPI or cards, making the process faster and cashless.
+</p>
+</div>
+
+<div class="card">
+<i class="fas fa-camera"></i>
+<h3>Automatic Number Plate Recognition</h3>
+<p>
+Camera-based system can be added to automatically detect vehicle number plates for secure entry and exit without manual checking.
+</p>
+</div>
+
+<div class="card">
+<i class="fas fa-cloud"></i>
+<h3>Cloud Database Expansion</h3>
+<p>
+Expanding Firebase integration to a full cloud system will allow better data storage, analytics, and multi-location parking management.
+</p>
+</div>
+
+<div class="card">
+<i class="fas fa-bell"></i>
+<h3>Smart Alerts System</h3>
+<p>
+Users can receive notifications about available slots, booking confirmation, and parking status updates in real time.
+</p>
+</div>
+
+</div>
+
+</section> 
+
+<!-- Our Vision -->
+<section class="section">
+
+<h2 class="section-title">Our Vision</h2>
+
+<p class="section-sub">
+Our vision is to develop a reliable and efficient Smart Parking System that can be implemented in real-world environments such as cities, malls, and institutions. In the future, we aim to improve system scalability, enhance automation, and integrate advanced IoT technologies to make parking management more smooth, accurate, and user-friendly.
+</p>
+
 </section>
 
 <!-- Footer -->
 <footer>
-© 2026 Smart Parking System | Developed By Smart Parking Major Project Team 
+© 2026 Smart Parking System | Developed By Smart Parking Major Project Team
 </footer>
 
 </body>
