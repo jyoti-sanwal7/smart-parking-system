@@ -256,12 +256,24 @@ onValue(parkingRef, (snapshot) => {
   const data = snapshot.val();
   if(!data) return;
 
-  document.getElementById("availableCount").innerText = data.available || 0;
-  document.getElementById("occupiedCount").innerText = data.occupied || 0;
+  let occupied = 0;
+
+  if (data.slot1 == 1) occupied++;
+  if (data.slot2 == 1) occupied++;
+  if (data.slot3 == 1) occupied++;
+  if (data.slot4 == 1) occupied++;
+
+  let total = 4;
+  let available = total - occupied;
+
+  document.getElementById("availableCount").innerText = available;
+  document.getElementById("occupiedCount").innerText = occupied;
 
   if (data.lastParkingTime) {
     document.getElementById("lastParkingTime").innerText = data.lastParkingTime;
   }
+
+  console.log("Updated:", data);
 });
 
 </script>
